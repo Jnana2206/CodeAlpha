@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Responsive Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filter-btns">
+    <button onclick="filterGallery('all')">All</button>
+    <button onclick="filterGallery('nature')">Nature</button>
+    <button onclick="filterGallery('city')">City</button>
+    <button onclick="filterGallery('animals')">Animals</button>
+  </div>
+
+  <!-- Image Gallery -->
+  <div class="gallery">
+    <img src="https://http://images2.fanpop.com/images/photos/7800000/Amazing-Nature-Wallpapers-national-geographic-7896980-1280-960.jpg" alt="Nature" data-category="nature">
+    <img src="https://source.unsplash.com/400x300/?city" alt="City" data-category="city">
+    <img src="https://source.unsplash.com/400x300/?animals" alt="Animals" data-category="animals">
+    <img src="https://source.unsplash.com/400x300/?mountain" alt="Nature" data-category="nature">
+    <img src="https://source.unsplash.com/400x300/?forest" alt="Nature" data-category="nature">
+    <img src="https://source.unsplash.com/400x300/?dog" alt="Animals" data-category="animals">
+    <img src="https://source.unsplash.com/400x300/?cat" alt="Animals" data-category="animals">
+    <img src="https://source.unsplash.com/400x300/?buildings" alt="City" data-category="city">
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <span class="prev" onclick="changeImage(-1)">&#10094;</span>
+    <img id="lightbox-img" src="" alt="">
+    <span class="next" onclick="changeImage(1)">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
